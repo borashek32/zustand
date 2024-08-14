@@ -1,22 +1,22 @@
 'use client';
 
-import { useCounterStore } from '@/src/providers/counter-store-provider';
+import { useCounterStore } from '@/app/src/providers/counter-store-provider';
 
 export const Counter = () => {
-    const { count, incrementCount, decrementCount } = useCounterStore(
-        (state) => state
-    );
+  const { count, incrementCount, decrementCount } = useCounterStore(
+    (state) => state
+  );
 
-    return (
-        <div>
-            Count: {count}
-            <hr />
-            <button type="button" onClick={() => void incrementCount()}>
-                Increment Count
-            </button>
-            <button type="button" onClick={() => void decrementCount()}>
-                Decrement Count
-            </button>
-        </div>
-    );
+  return (
+    <div>
+      Count: {count}
+      <hr />
+      <button type="button" onClick={() => void incrementCount()}>
+        Increment Count
+      </button>
+      <button type="button" onClick={() => void decrementCount()}>
+        Decrement Count
+      </button>
+    </div>
+  );
 };
